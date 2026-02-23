@@ -1,0 +1,3 @@
+pandas
+fuzzywuzzy
+python-Levenshtein
