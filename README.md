@@ -1,5 +1,12 @@
 # Setup
 
+## Prequisites
+
+- Playnite
+- Python
+- Bash
+- Powershell
+
 ## Get list of supported games in Nucleus Coop
 
 - Create file called nucleus_games.txt in project root (version in repo was created 2/22/2026)
@@ -18,7 +25,7 @@ tmp=$(mktemp) && sed '/./!d' nucleus_games.txt > "$tmp" && mv "$tmp" nucleus_gam
 
 ## Get list of game names in Playnite Library
 
-- Start a PowerShell instance with pre-loaded Playnite SDK from main menu -> Extensions -> Interactive SDK PowerShell. This will open PowerShell console connected to Playnite process and initialize new runspace for this interactive session.
+- In Playnite app -> main menu dropdown -> Extensions, click Interactive SDK PowerShell. This will open PowerShell console connected to Playnite process and initialize new runspace for this interactive session.
 
 
 - Run the following in the opened PowerShell terminal:
@@ -38,7 +45,7 @@ Set-Content -Path '~\games.txt' -Value $games -Encoding UTF8
 ## Make virtual environment for python script
 
 ```bash
-#Bash
+# Bash
 
 # create and activate venv
 python -m venv .venv && source .venv/Scripts/activate
